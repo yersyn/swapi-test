@@ -1,6 +1,6 @@
 import { HttpStatus } from "@nestjs/common";
-import { AppConfigs } from "../constants/app.configs";
-import { ApiGenericResponse } from "../domain/generic/api-generic-response.generic";
+import { AppConfigs } from "src/core/constants/app.configs";
+import { ApiGenericResponse } from "./api-generic-response.generic";
 
 export class ApiBaseController{
 	

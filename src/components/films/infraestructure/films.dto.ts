@@ -1,4 +1,4 @@
-import { PeopleDto } from "src/components/people/infraestructure/api/dto/people.dto";
+import { PeopleDto } from "src/components/people/infrastructure/api/dto/people.dto";
 
 export class FilmsDto {
     

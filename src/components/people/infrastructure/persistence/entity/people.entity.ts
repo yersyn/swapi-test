@@ -1,5 +1,5 @@
-import { FilmsEntity } from "src/components/films/entity/films.entity";
 import { Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import { FilmsEntity } from "src/components/films/entity/films.entity";
 
 @Entity("people")
 export class PeopleEntity {

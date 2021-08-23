@@ -7,25 +7,22 @@ export class PeopleService implements PeopleServiceInterface {
 
     constructor(
         @Inject('PeopleRepositoryInterface') private readonly peopleRepository: PeopleRepositoryInterface,
-    ) {}
+    ) { }
 
     async getById(id: number): Promise<People> {
         return await this.peopleRepository.findById(id);
     }
 
-    
     async get(): Promise<People[]> {
         return await this.peopleRepository.findAll();
     }
 
-    async create(peopleDto: People): Promise<People> {
+    async create(people: People): Promise<People> {
         try {
-         
-        console.log(peopleDto);
-        return await this.peopleRepository.create(peopleDto);           
+            console.log(people);
+            return await this.peopleRepository.create(people);
         } catch (error) {
             console.log(error);
-            
         }
     }
 

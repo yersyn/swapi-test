@@ -1,4 +1,4 @@
-import { PeopleEntity } from "src/components/people/infraestructure/persistence/entity/people.entity";
+import { PeopleEntity } from "src/components/people/infrastructure/persistence/entity/people.entity";
 import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('films')

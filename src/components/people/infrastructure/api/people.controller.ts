@@ -1,9 +1,9 @@
 import { Body, Controller, Get, HttpStatus, Inject, Param, ParseIntPipe, Post, Res } from '@nestjs/common';
 import { identity } from 'rxjs';
-import { appMessages } from 'src/shared/constants/app-messages.constant';
-import { AppUrls } from 'src/shared/constants/app-urls.constant';
-import { ApiBaseController } from 'src/shared/controller/api-base-controller.controller';
-import { ApiGenericResponse } from 'src/shared/domain/generic/api-generic-response.generic';
+import { appMessages } from 'src/core/constants/app-messages.constant';
+import { AppUrls } from 'src/core/constants/app-urls.constant';
+import { ApiBaseController } from 'src/infrastructure/api/generic/api-base-controller.controller';
+import { ApiGenericResponse } from 'src/infrastructure/api/generic/api-generic-response.generic';
 import { PeopleServiceInterface } from '../../domain/use-cases/ports/input/people.service.interface';
 import { PeopleDto } from './dto/people.dto';
 

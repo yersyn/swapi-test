@@ -1,22 +1,22 @@
 import { Module } from '@nestjs/common';
-import { PeopleRepository } from './infraestructure/persistence/people.repository';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { PeopleController } from './infraestructure/api/people.controller';
 import { PeopleService } from './domain/use-cases/people.service';
-import { PeopleEntity } from './infraestructure/persistence/entity/people.entity';
+import { PeopleController } from './infrastructure/api/people.controller';
+import { PeopleEntity } from './infrastructure/persistence/entity/people.entity';
+import { PeopleRepository } from './infrastructure/persistence/people.repository';
 
 @Module({
   controllers: [PeopleController],
   imports: [TypeOrmModule.forFeature([PeopleEntity])],
-  providers: [{
-    provide: 'PeopleServiceInterface',
-    useClass: PeopleService
-  },
-  {
-    provide: 'PeopleRepositoryInterface',
-    useClass: PeopleRepository
-  }
-]
-
+  providers: [
+    {
+      provide: 'PeopleServiceInterface',
+      useClass: PeopleService
+    },
+    {
+      provide: 'PeopleRepositoryInterface',
+      useClass: PeopleRepository
+    }
+  ]
 })
-export class PeopleModule {}
+export class PeopleModule { }
